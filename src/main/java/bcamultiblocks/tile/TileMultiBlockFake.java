@@ -21,6 +21,11 @@ public class TileMultiBlockFake extends TileMultiBlock {
 		originalMeta = compound.getByte("BlockMeta");
 	}
 
+	public void setBlock(String name, int meta) {
+		setOriginalName(name);
+		setOriginalMeta(meta);
+	}
+
 	public String getOriginalName() {
 		return originalName;
 	}

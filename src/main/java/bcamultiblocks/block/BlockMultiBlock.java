@@ -32,13 +32,13 @@ public abstract class BlockMultiBlock extends Block implements ITileEntityProvid
 		getTile(world, x, y, z).onBlockClicked(player);
 	}
 
-	public TileMultiBlock getTile(World world, int x, int y, int z) {
+	public TileMultiBlock getTile(IBlockAccess world, int x, int y, int z) {
 		return (TileMultiBlock) world.getTileEntity(x, y, z);
 	}
 
-	public <T> T getTile(World world, int x, int y, int z, Class<T> clazz) {
+	public <T> T getTile(IBlockAccess world, int x, int y, int z, Class<T> clazz) {
 		TileMultiBlock tile = getTile(world, x, y, z);
-		return !clazz.isInstance(tile) ? null : (T) tile;
+		return (T) tile;
 	}
 
 	@Override
