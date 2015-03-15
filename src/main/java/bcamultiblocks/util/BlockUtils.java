@@ -13,7 +13,7 @@ public class BlockUtils {
 
     public static TileEntity getTileEntityFast(World world, int x, int y, int z) {
         if (world != null && world.blockExists(x, y, z))
-            return world.getChunkFromChunkCoords(x, z).getTileEntityUnsafe(x >> 4, y, z >> 4);
+            return world.getChunkFromChunkCoords(x >> 4, z >> 4).getTileEntityUnsafe(x & 15, y, z & 15);
         return null;
     }
 
