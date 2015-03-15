@@ -1,4 +1,4 @@
-package bcamultiblocks.mutliblock.definition;
+package bcamultiblocks.multiblock.definition;
 
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
@@ -6,7 +6,7 @@ import net.minecraft.world.World;
 public class BlockDefinitionAll extends BlockDefinition {
 
 	@Override
-	public boolean matches(Block block, int meta, World world, int x, int y, int z) {
+	public boolean matches(World world, int x, int y, int z, Block block, int meta) {
 		return true;
 	}
 }
