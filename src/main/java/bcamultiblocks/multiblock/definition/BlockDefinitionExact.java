@@ -10,9 +10,8 @@ import net.minecraft.world.World;
  * Please check the contents of the license located in
  * http://buildcraftadditions.wordpress.com/wiki/licensing-stuff/
  */
-public class BlockDefinitionExact extends BlockDefinition {
+public class BlockDefinitionExact extends BlockDefinitionBlock {
 
-	private final Block block;
 	private final int meta;
 
 	public BlockDefinitionExact(Block block) {
@@ -20,13 +19,13 @@ public class BlockDefinitionExact extends BlockDefinition {
 	}
 
 	public BlockDefinitionExact(Block block, int meta) {
-		this.block = block;
+		super(block);
 		this.meta = meta;
 	}
 
 	@Override
 	protected boolean matches(World world, int x, int y, int z, Block block, int meta) {
-		return this.block == block && this.meta == meta;
+		return super.matches(world, x, y, z, block, meta) && this.meta == meta;
 	}
 
 }
