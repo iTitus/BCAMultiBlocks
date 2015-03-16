@@ -7,14 +7,11 @@ import net.minecraftforge.common.util.ForgeDirection;
 
 public class TileMultiBlock extends TileEntity {
 
-	public boolean onBlockActivated(EntityPlayer player, ForgeDirection side, float hitX, float hitY, float hitZ) {
-		return false;
+	public boolean onBlockActivated(EntityPlayer player) {
+		return false; //TODO: implement
 	}
 
 	public boolean onBlockClicked(EntityPlayer player) {
-		return false;
-	}
-
-	public void breakBlock() {
+		return false; //TODO: implement
 	}
 }
