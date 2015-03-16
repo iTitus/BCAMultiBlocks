@@ -10,4 +10,5 @@ public abstract class BlockDefinition {
 	}
 
 	protected abstract boolean matches(World world, int x, int y, int z, Block block, int meta);
+
 }

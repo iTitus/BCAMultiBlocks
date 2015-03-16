@@ -9,4 +9,5 @@ public class BlockDefinitionAir extends BlockDefinition {
 	public boolean matches(World world, int x, int y, int z, Block block, int meta) {
 		return block.isAir(world, x, y, z);
 	}
+
 }

@@ -15,6 +15,10 @@ public class BlockDefinitionExact extends BlockDefinition {
 	private final Block block;
 	private final int meta;
 
+	public BlockDefinitionExact(Block block) {
+		this(block, 0);
+	}
+
 	public BlockDefinitionExact(Block block, int meta) {
 		this.block = block;
 		this.meta = meta;
@@ -24,4 +28,5 @@ public class BlockDefinitionExact extends BlockDefinition {
 	protected boolean matches(World world, int x, int y, int z, Block block, int meta) {
 		return this.block == block && this.meta == meta;
 	}
+
 }
