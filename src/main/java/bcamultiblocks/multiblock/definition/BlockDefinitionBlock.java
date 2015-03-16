@@ -15,5 +15,5 @@ public class BlockDefinitionBlock extends BlockDefinition {
 	protected boolean matches(World world, int x, int y, int z, Block block, int meta) {
 		return this.block == block;
 	}
-	
+
 }
